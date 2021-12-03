@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d2ec03b4-f56a-444d-a1a5-7f512f593201": {
+      "ProjectGuid": "d2ec03b4-f56a-444d-a1a5-7f512f593201",
+      "DisplayName": "u3-aspnetcore-efcore-18100220",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

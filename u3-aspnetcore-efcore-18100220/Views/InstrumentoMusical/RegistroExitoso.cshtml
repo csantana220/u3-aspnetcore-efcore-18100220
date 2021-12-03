@@ -1,0 +1,30 @@
+﻿@model InstrumentoMusical
+
+
+<h1>RegistroExitoso</h1>
+
+<h4>Instrumento</h4>
+<hr />
+<dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.IdInstrumento)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.IdInstrumento)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Nombre)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Nombre)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.IdTipo)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.IdTipo)
+    </dd>
+</dl>
+    <div>
+        <a asp-action="ListadoRegistros">Regresar al Listado</a>
+    </div>

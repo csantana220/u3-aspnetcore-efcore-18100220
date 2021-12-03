@@ -1,0 +1,29 @@
+﻿@model IEnumerable<InstrumentoMusical>
+
+<h3>Listado de Instrumentos</h3>
+<div><a class="btn btn-primary" asp-action="AgregarRegistro">Nuevo registro</a></div>
+
+<table class="table table-striped">
+    <tr>
+        <th>Id Instrumento</th>
+        <th>Nombre</th>
+        <th>Id Tipo</th>
+    </tr>
+    @foreach (var registro in Model)
+    {
+<tr>
+    <td>@registro.IdInstrumento</td>
+    <td>@registro.Nombre</td>
+    <td>@registro.IdTipo</td>
+    <td>
+        <a asp-action="EditarRegistro" asp-route-id="@registro.IdInstrumento">Editar</a>
+        <a asp-action="EliminarRegistro" asp-route-id="@registro.IdInstrumento">Delete</a>
+    </td>
+        </tr>
+        }
+        </table>
+
+<form asp-action="CargarRegistros" method="post">
+    <input type="submit" value="Cargar" class="btn btn-danger" /> |
+    <a asp-action="Index">Regresar al Listado</a>
+</form>

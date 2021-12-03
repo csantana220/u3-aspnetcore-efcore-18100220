@@ -1,0 +1,24 @@
+﻿@model IEnumerable<InstrumentoMusical>
+
+<h3>Listado videojuegos</h3>
+<div><a asp-action="NuevoRegistro">Nuevo registro</a></div>
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>IdTipo</th>
+    </tr>
+    @foreach (var registro in Model)
+    {
+<tr>
+    <td>@registro.IdInstrumento</td>
+    <td>@registro.Nombre</td>
+    <td>@registro.IdTipo</td>
+</tr>
+}
+</table>
+
+<form asp-action="CargarRegistros" method="post">
+    <input type="submit" value="Cargar" class="btn btn-danger" /> |
+    <a asp-action="Index">Regresar al Listado</a>
+</form>

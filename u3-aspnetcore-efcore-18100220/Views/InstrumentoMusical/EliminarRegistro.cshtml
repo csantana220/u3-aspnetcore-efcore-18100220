@@ -1,0 +1,36 @@
+﻿@model InstrumentoMusical
+
+<h1>Delete</h1>
+
+<h3>Seguro que desea borrar este registro?</h3>
+<div>
+    <h4>Instrumento</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdInstrumento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdInstrumento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdTipo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdTipo)
+        </dd>
+    </dl>
+
+    <form asp-action="ConfirmacionEliminarInstrumento" method="post">
+        <input type="hidden" asp-for="IdInstrumento" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Regresar al Listado</a>
+    </form>
+</div>
+
